@@ -1,0 +1,144 @@
+/* Basic reset and layout styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* General sans-serif font family */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(244, 234, 234);
+}
+
+header {
+    background-color: rgb(26, 23, 23);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header .logo img {
+    height: 40px; /* Adjust based on your logo size */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#calculator {
+    background-color: rgb(26, 23, 23);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+#display {
+    width: 100%;
+    height: 80px;
+    padding: 15px;
+    text-align: right;
+    border: none;
+    color: white;
+    background-color: hsl(0, 0%, 23%);
+    font-size: 2.5rem;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(190, 134, 22);
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(26, 23, 23);
+}
+
+button {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    border: 3px solid transparent; /* Default border color */
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.1s, border-color 0.2s; /* Added transition for border color */
+}
+
+button:hover {
+    background-color: rgb(240, 240, 235);
+    color: black;
+}
+
+button:active {
+    background-color: rgb(229, 229, 218);
+    color: black;
+    transform: scale(0.98);
+    border-color: blue; /* Change border color on click */
+}
+
+.operator-btn {
+    background-color: rgb(190, 134, 22);
+    color: black;
+}
+
+.operator-btn:hover {
+    background-color: rgb(227, 167, 4);
+}
+
+.operator-btn:active {
+    background-color: hsl(35, 100%, 75%);
+    transform: scale(0.98);
+    border-color: blue; /* Change border color on click for operator buttons */
+}
+
+footer {
+    background-color: rgb(26, 23, 23);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #display {
+        font-size: 2rem;
+        height: 60px;
+    }
+
+    button {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    footer p {
+        font-size: 0.875rem;
+    }
+}
